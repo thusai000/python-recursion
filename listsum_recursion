@@ -1,0 +1,19 @@
+def recursive_listsum(data_list):
+    """
+    Recursively calculates the sum of all numbers in a list.
+    
+    :param data_list: A list of numbers.
+    :return: The sum of the numbers in the list.
+    """
+    # Base Case: If the list is empty, the sum is 0.
+    if not data_list:
+        return 0
+    
+    # Recursive Step: Add the first element to the sum of the rest of the list.
+    # data_list[0] is the first element.
+    # data_list[1:] is a sublist containing all elements EXCEPT the first one.
+    return data_list[0] + recursive_listsum(data_list[1:])
+
+# Example Usage:
+# my_list = [1, 2, 3, 4, 5]
+# print(recursive_listsum(my_list))  # Output: 15
